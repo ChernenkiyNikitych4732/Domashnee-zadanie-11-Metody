@@ -14,7 +14,6 @@ public class Main {
             System.out.println(year + " год не является високосным");
         }
     }
-
     public static void task1() {
         System.out.println("Задача №1");
         System.out.println("Реализуйте метод, который получает в качестве параметра год, проверяет, является ли он високосным, и выводит результат в консоль.\n" +
@@ -45,7 +44,6 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
-
     public static void task2() {
         System.out.println("Задача 2");
         System.out.println("Вспомните задание 2 из урока «Условные операторы», где вы предлагали пользователю облегченную версию приложения." +
@@ -65,7 +63,6 @@ public class Main {
         int clientDeviceYear = 2024;
         recommendationVersion(os, clientDeviceYear);
     }
-
     public static int countingDays(int distance) {
         int day = 0;
         if (distance <= 20) {
@@ -77,7 +74,6 @@ public class Main {
         }
         return day;
     }
-
     public static void task3() {
         System.out.println("Задача 3");
         System.out.println("Возвращаемся к задаче на расчет дней доставки банковской карты." +
@@ -89,6 +85,10 @@ public class Main {
                 "Доставка в пределах от 20 км до 60 км добавляет еще один день доставки.\n" +
                 "Доставка в пределах от 60 км до 100 км добавляет еще одни сутки.\n" +
                 "Свыше 100 км доставки нет.\n" +
+                "Доставка в пределах 40 км занимает сутки.\n" +
+                "Доставка в пределах от 40 км до 80 км добавляет еще один день доставки.\n" +
+                "Доставка в пределах от 80 км до 120 км добавляет еще одни сутки.\n" +
+                "Свыше 120 км доставки нет.\n" +
                 "То есть с каждым следующим интервалом доставки срок увеличивается на 1 день.\n" +
                 "\n" +
                 "Напишите программу, которая выдает сообщение в консоль: \"Потребуется дней: \" + срок доставки.\n" +
@@ -99,6 +99,7 @@ public class Main {
                 "Ваша задача — доработать код, а именно написать метод, который на вход принимает дистанцию и возвращает итоговое количество дней доставки.");
         System.out.println("Решение задачи №3");
         int deliveryDistance = 30;
+        deliveryDistance = 60;
         if (countingDays(deliveryDistance) != 0) {
             System.out.println("Потребуется дней для доставки: " + countingDays(deliveryDistance));
         } else {
